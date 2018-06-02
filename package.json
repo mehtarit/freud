@@ -2,6 +2,7 @@
   "name": "freud",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mehtarit.github.io/freud/",
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -10,7 +11,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
