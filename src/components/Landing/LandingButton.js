@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
 
 class LandingButton extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class LandingButton extends Component {
 
     render() {
         return (
-            <button>{this.props.buttonText}</button>
+            <Button variant="raised" color="primary">{this.props.buttonText}</Button>
         );
     }
 }

@@ -12,7 +12,7 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <h1 className="App-title">{this.props.headerText}</h1>
+                <h1>{this.props.headerText}</h1>
             </header>
         );
     }
