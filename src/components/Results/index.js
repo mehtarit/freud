@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ShareIcon from '@material-ui/icons/Share';
 
 import ResultCard from './ResultCard'
 
@@ -20,8 +21,11 @@ class Results extends Component {
                     <ResultCard
                         key={index}
                         image={result.imageURL}
-                        resultTitle={result.firstName}
-                        resultSubtext={result.phoneNumber} />
+                        resultTitle={result.title}
+                        resultProfileBio={result.profileBio}
+                        resultPhoneNumber={result.phoneNumber}
+                        resultLocation={result.location}
+                        resultQualifications={result.qualifications} />
                 ))
                 }</div>
             </div>
