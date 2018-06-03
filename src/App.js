@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header'
-import Main from './Main'
 import './styles/App.css';
-import Landing from './components/Landing/Landing'
-import Resources from './components/Resources/Resources'
 
+import Main from './Main'
 
 class App extends Component {
   constructor(props) {
@@ -15,8 +12,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Landing />
-        <Header />
         <Main />
       </div>
     );

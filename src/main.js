@@ -1,6 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './Home'
+
+import Landing from './components/Landing'
+import Resources from './components/Resources'
+import Results from './components/Results'
 
 
 // The Main component renders one of the three provided
@@ -11,7 +14,9 @@ import Home from './Home'
 const Main = () => (
   <main>
     <Switch>
-      <Route exact path='/' component={Home}/>
+      <Route exact path='/' component={Landing} />
+      <Route exact path='/resources' component={Resources} />
+      <Route exact path='/results' component={Results} />
     </Switch>
   </main>
 )
