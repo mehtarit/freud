@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import ResourceCard from './ResourceCard'
 
@@ -16,11 +17,12 @@ class Resources extends Component {
         return (
             <div className="Resources">
                 <h1>I'm looking for...</h1>
-                <div className="ResourceCardWrapper">{this.state.resources.map(resource => (
-                    <ResourceCard
-                        key={resource.id}
-                        resourceTitle={resource.resourceTitle}
-                        resourceSubtext={resource.resourceSubtext} />
+                <div className="ResourceCardWrapper">{this.state.resources.map((resource, index) => (
+                    <Link to='/conversation' style={{ textDecoration: 'none' }}
+                        key={index}><ResourceCard
+                            key={index}
+                            resourceTitle={resource.resourceTitle}
+                            resourceSubtext={resource.resourceSubtext} /></Link>
                 ))
                 }</div>
             </div>

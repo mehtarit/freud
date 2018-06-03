@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import Header from './Header';
 import LandingButton from './LandingButton'
@@ -13,7 +14,9 @@ class Landing extends Component {
         return (
             <div className="Landing">
                 <Header headerText="The Mental Health Directory" />
-                <LandingButton buttonText="Help!" />
+                <Link to='/resources' style={{ textDecoration: 'none' }}>
+                    <LandingButton buttonText="Help!" />
+                </Link>
             </div>
         );
     }
