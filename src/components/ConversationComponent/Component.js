@@ -41,34 +41,37 @@ const ConversationComponent = (props) => {
     });
 
     return (
+
         <div className='ConversationComponent'>
-            <h1> {props.prompt} </h1>
             {
-                props.type === 'text'
-                ?
-                    <TextField></TextField>
-                : 
+             <div className='ConversationCentered'>
+                <h1> {props.prompt} </h1>
+                {
+                    props.type === 'text'
+                    ?
+                        <div>
+                        <TextField></TextField>                        
+                        </div>              
+                    : 
                     <FormControl component="fieldset">
                         <FormGroup>
                             {answerList}
-                        </FormGroup>                       
+                        </FormGroup>
                     </FormControl>
-            }
-
-            <div>
-            {
-
-            props.next === null
-            ?
-                <Link exact to='/results' style={{ textDecoration: 'none' }}>
-                        <LandingButton buttonText="Submit" />
-                </Link>
-            :
-                <Link to={props.next} style={{ textDecoration: 'none' }}>
-                        <LandingButton buttonText="Next" />
-                </Link>
-            }
+                }
+                                        {
+                           props.next === null
+                            ?
+                            <Link exact to='/results' style={{ textDecoration: 'none' }}>
+                                <LandingButton buttonText="Submit" />
+                            </Link>
+                            :
+                            <Link to={props.next} style={{ textDecoration: 'none' }}>
+                                <LandingButton buttonText="Next" />
+                            </Link>
+                        }
             </div>
+        }
        </div>
 
 
