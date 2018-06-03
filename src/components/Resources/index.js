@@ -17,7 +17,7 @@ class Resources extends Component {
     render() {
         return (
             <div className="Resources">
-                <h1 style={{ color: "#fff" }}>I'm looking for...</h1>
+                <h1>I'm looking for...</h1>
                 <div className="ResourceCardWrapper">
                     {
                         this.state.resources.map((resource, index) => (
