@@ -10,9 +10,28 @@ class App extends Component {
   }
 
   render() {
+    const dynamicQuestions = [
+      {
+        type: 'checkbox',
+        prompt: 'How are you feeling?',
+        answers: ['goooooood', 'bad', 'great'],
+      },
+      {
+        type: 'radio',
+        prompt: 'How are you feeling?',
+        answers: ['good', 'bad', 'gt'],
+      },
+      {
+        type: 'input',
+        prompt: 'How are you feeling?',
+        answers: ['go', 'bad', 'great'],
+      }
+    ];
     return (
       <div className="App">
-        <Main />
+        <Main
+          dynamicQuestions={dynamicQuestions}
+        />
       </div>
     );
   }

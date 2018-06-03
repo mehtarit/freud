@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import Header from './Header';
 import LandingButton from './LandingButton'
-import M from '../ConversationComponent'
 
 class Landing extends Component {
     constructor(props) {
@@ -18,7 +17,6 @@ class Landing extends Component {
                 <Link to='/resources' style={{ textDecoration: 'none' }}>
                     <LandingButton buttonText="Help!" />
                 </Link>
-                <M />
             </div>
         );
     }
