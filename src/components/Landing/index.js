@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './Header';
 import LandingButton from './LandingButton'
+import M from '../ConversationComponent'
 
 class Landing extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class Landing extends Component {
             <div className="Landing">
                 <Header headerText="The Mental Health Directory" />
                 <LandingButton buttonText="Help!" />
+                <M />
             </div>
         );
     }
