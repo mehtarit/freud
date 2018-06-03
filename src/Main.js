@@ -15,13 +15,13 @@ import ConversationComponent from './components/ConversationComponent/Component'
 // when the pathname is exactly the string "/"
 const Main = (props) => {
   const slides = props.dynamicQuestions.map((question, index) => {
-    const path = `/${index}`
+    const path = `/conversation/${index}`
     return (
       <Route
         exact
         path={path}
         key={index}
-        render={() => <ConversationComponent type={question.type} prompt={question.prompt} answers={question.answers} />}
+        render={() => <ConversationComponent type={question.type} prompt={question.prompt} answers={question.answers} next={question.next}/>}
       />
     );
   });

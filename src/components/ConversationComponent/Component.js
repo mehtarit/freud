@@ -7,6 +7,8 @@ import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import styles from './styles.css';
+import { Link } from 'react-router-dom'
+import LandingButton from '../Landing/LandingButton'
 
 
 const ConversationComponent = (props) => {
@@ -48,10 +50,27 @@ const ConversationComponent = (props) => {
                     <FormControl component="fieldset">
                         <FormGroup>
                             {answerList}
-                        </FormGroup>
+                        </FormGroup>                       
                     </FormControl>
             }
-        </div>
+
+            <div>
+            {
+
+            props.next === null
+            ?
+                <Link exact to='/results' style={{ textDecoration: 'none' }}>
+                        <LandingButton buttonText="Submit" />
+                </Link>
+            :
+                <Link to={props.next} style={{ textDecoration: 'none' }}>
+                        <LandingButton buttonText="Next" />
+                </Link>
+            }
+            </div>
+       </div>
+
+
     )
 }
 
