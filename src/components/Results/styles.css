@@ -1,5 +1,6 @@
 .ResultCardWrapper {
-  display: flex;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .ResultCardWrapper div:first-child {
@@ -11,3 +12,10 @@
 	padding-top: 25px;
 }
  
+.Title {
+	text-transform: capitalize;
+}
+
+.Bio {
+	height: 30%;
+}
