@@ -15,7 +15,8 @@ const styles = {
     card: {
         width: 300,
         margin: 15,
-        height: 600
+        height: 800,
+        position: 'relative'
     },
     media: {
         height: 0,
@@ -51,17 +52,17 @@ function ResultCard(props) {
                     image={props.image}
                     title="Contact Image"
                 />
-                <CardContent>
+                <CardContent className="ResourceCard">
                     <Typography className="Title" gutterBottom variant="headline" component="h2">
                         {props.resultTitle}
                     </Typography>
                     <div className="Bio">
                         <Typography component="p">
-                            {props.resultProfileBio}
+                            {props.resultProfileBio.substring(0, 200) + "..."}
                         </Typography>
                     </div>
                     <hr />
-                    <div className={classes.entryWithIconWrapper}>
+                    <div className="IconSet">
                         <IconButton aria-label="Phone">
                             <PhoneIcon />
                         </IconButton>
@@ -69,7 +70,7 @@ function ResultCard(props) {
                             {props.resultPhoneNumber}
                         </Typography>
                     </div>
-                    <div className={classes.entryWithIconWrapper}>
+                    <div className="IconSet">
                         <IconButton aria-label="Address">
                             <WorkIcon />
                         </IconButton>
@@ -82,7 +83,7 @@ function ResultCard(props) {
                         {props.resultQualifications}
                     </Typography>
                 </CardContent>
-                <CardActions className={classes.cardActions}>
+                <CardActions className="ResourceSelect">
                     <Button size="small">
                         Select
                     </Button>

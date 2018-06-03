@@ -17,5 +17,35 @@
 }
 
 .Bio {
-	height: 30%;
+	height: 80%;
+}
+
+.IconSet {
+	display: flex;
+	align-items: center;
+}
+
+.IconSet p {
+	color: #4A90E2;
+}
+
+.IconSet p:hover {
+	cursor: pointer;
+} 
+
+.ResourceCard {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.ResourceSelect {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.ResourceSelect button {
+	margin: auto;
+	border: 2px solid;
 }
