@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import ResultRow from './ResultRow'
 import ResultCard from './ResultCard'
 
 import ResultsApi from '../../api/ResultsApi'
@@ -15,7 +16,8 @@ class Results extends Component {
     render() {
         return (
             <div className="Results">
-                <h1>Results</h1>
+                <h1>Results...</h1>
+                <ResultRow />
                 <div className="ResultCardWrapper">{this.state.results.map((result, index) => (
                     <ResultCard
                         key={index}
