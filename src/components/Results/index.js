@@ -19,7 +19,7 @@ class Results extends Component {
         return (
             <div className="Results">
                 <div className="ResultsHeaderWrapper">
-                    <h1 style={{ color: "#fff" }}>Results</h1>
+                    <h1>Results</h1>
                 </div>
                 <ResultRow />
                 <div className="ResultCardWrapper">{this.state.results.map((result, index) => (
