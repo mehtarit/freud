@@ -3,6 +3,7 @@ import Header from './Header'
 import Main from './Main'
 import './styles/App.css';
 import Landing from './components/Landing/Landing'
+import Resources from './components/Resources/Resources'
 
 
 class App extends Component {
