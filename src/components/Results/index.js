@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import './styles.css'
 
 import ResultRow from './ResultRow'
 import ResultCard from './ResultCard'
@@ -10,7 +11,7 @@ class Results extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            results: ResultsApi.getAllExcludeGenderAndExcludeNoImages("male")
+            results: ResultsApi.getAllMockFlow("male")
         };
     }
 
@@ -18,7 +19,7 @@ class Results extends Component {
         return (
             <div className="Results">
                 <div className="ResultsHeaderWrapper">
-                    <h1>Results</h1>
+                    <h1 style={{ color: "#fff" }}>Results</h1>
                 </div>
                 <ResultRow />
                 <div className="ResultCardWrapper">{this.state.results.map((result, index) => (

@@ -9,9 +9,9 @@ const ResultsApi = {
             return result.gender !== excludedGender;
         });
     },
-    getAllExcludeGenderAndExcludeNoImages: function (excludedGender) {
+    getAllMockFlow: function (excludedGender) {
         return results.filter(function (result) {
-            return (result.gender !== excludedGender && result.imageURL !== "");
+            return (result.gender !== excludedGender && result.imageURL !== "" && result.ageRange !== "under18");
         });
     }
 }

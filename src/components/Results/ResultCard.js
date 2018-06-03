@@ -14,7 +14,7 @@ import WorkIcon from '@material-ui/icons/Work';
 const styles = {
     card: {
         minWidth: 175,
-        maxWidth: 285,
+        maxWidth: 398,
         margin: 15
     },
     cardActions: {
@@ -34,8 +34,16 @@ const styles = {
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '90.25%', // 16:9
     },
+    entryWithIconWrapper: {
+        display: "flex",
+        justifyContent: "flex-start",
+        flexWrap: "wrap"
+    },
+    entryWithIconParagraph: {
+        margin: "auto"
+    }
 };
 
 function ResultCard(props) {
@@ -56,18 +64,24 @@ function ResultCard(props) {
                     <Typography component="p">
                         {props.resultProfileBio}
                     </Typography>
-                    <IconButton aria-label="Phone">
-                        <PhoneIcon />
-                    </IconButton>
-                    <Typography component="p">
-                        {props.resultPhoneNumber}
-                    </Typography>
-                    <IconButton aria-label="Address">
-                        <WorkIcon />
-                    </IconButton>
-                    <Typography component="p">
-                        {props.resultLocation}
-                    </Typography>
+                    <hr />
+                    <div className={classes.entryWithIconWrapper}>
+                        <IconButton aria-label="Phone">
+                            <PhoneIcon />
+                        </IconButton>
+                        <Typography component="p" className={classes.entryWithIconParagraph}>
+                            {props.resultPhoneNumber}
+                        </Typography>
+                    </div>
+                    <div className={classes.entryWithIconWrapper}>
+                        <IconButton aria-label="Address">
+                            <WorkIcon />
+                        </IconButton>
+                        <Typography component="p" className={classes.entryWithIconParagraph}>
+                            {props.resultLocation}
+                        </Typography>
+                    </div>
+                    <hr />
                     <Typography component="p">
                         {props.resultQualifications}
                     </Typography>

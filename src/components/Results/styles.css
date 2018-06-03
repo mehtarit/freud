@@ -1,0 +1,13 @@
+.ResultCardWrapper {
+  display: flex;
+}
+
+.ResultCardWrapper div:first-child {
+	margin-left: 0px;
+}
+
+.Results {
+	padding-left:50px;
+	padding-top: 25px;
+}
+ 
