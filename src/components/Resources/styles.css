@@ -1,3 +1,13 @@
 .ResourceCardWrapper {
   display: flex;
 }
+
+.ResourceCardWrapper div:first-child {
+	margin-left: 0px;
+}
+
+.Resources {
+	padding-left:50px;
+	padding-top: 25px;
+}
+ 
