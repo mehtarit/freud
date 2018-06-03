@@ -21,7 +21,7 @@ class Results extends Component {
                 <div className="ResultsHeaderWrapper">
                     <h1>Results</h1>
                 </div>
-                <ResultRow />
+                {/*/ <ResultRow /> /*/}
                 <div className="ResultCardWrapper">{this.state.results.map((result, index) => (
                     <ResultCard
                         key={index}
