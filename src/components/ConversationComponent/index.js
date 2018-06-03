@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
+import ConversationComponent from './Component';
 
 
-const ConversationComponent = (props) => {
-  return (
-    <div>
-      <h1> convo compnent </h1>
-    </div>
-  )
+export default class Container extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {};
+    }
+
+    render() {
+        return (
+          <ConversationComponent
+            type="great"
+            prompt="ldadfsol"
+            answers={['hi', 'how', 'are', 'you']}
+          />
+        );
+    }
 }
-
-export default ConversationComponent
