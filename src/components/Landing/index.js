@@ -13,9 +13,9 @@ class Landing extends Component {
     render() {
         return (
             <div className="Landing">
-                <M />
                 <Header headerText="The Mental Health Directory" />
                 <LandingButton buttonText="Help!" />
+                <M />
             </div>
         );
     }

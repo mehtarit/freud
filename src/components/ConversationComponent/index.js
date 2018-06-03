@@ -11,7 +11,7 @@ export default class Container extends Component {
     render() {
         return (
           <ConversationComponent
-            type="great"
+            type="text"
             prompt="ldadfsol"
             answers={['hi', 'how', 'are', 'you']}
           />
