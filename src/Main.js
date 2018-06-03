@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Landing from './components/Landing'
+import Afflictions from './components/Afflictions'
 import Resources from './components/Resources'
 import Results from './components/Results'
 import ConversationComponent from './components/ConversationComponent/Component';
@@ -14,13 +15,13 @@ import ConversationComponent from './components/ConversationComponent/Component'
 // when the pathname is exactly the string "/"
 const Main = (props) => {
   const slides = props.dynamicQuestions.map((question, index) => {
-    const path = `/${index}`
+    const path = `/conversation/${index}`
     return (
       <Route
         exact
         path={path}
         key={index}
-        render={() => <ConversationComponent type={question.type} prompt={question.prompt} answers={question.answers}/>}
+        render={() => <ConversationComponent type={question.type} prompt={question.prompt} answers={question.answers} next={question.next}/>}
       />
     );
   });
@@ -29,6 +30,7 @@ const Main = (props) => {
     <main>
       <Switch>
         <Route exact path='/' component={Landing} />
+        <Route exact path='/afflictions' component={Afflictions} />
         <Route exact path='/resources' component={Resources} />
         {slides}
         <Route exact path='/results' component={Results} />

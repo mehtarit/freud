@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ShareIcon from '@material-ui/icons/Share';
+import Button from '@material-ui/core/Button';
 
+import ResultRow from './ResultRow'
 import ResultCard from './ResultCard'
 
 import ResultsApi from '../../api/ResultsApi'
@@ -16,7 +17,10 @@ class Results extends Component {
     render() {
         return (
             <div className="Results">
-                <h1>Results</h1>
+                <div className="ResultsHeaderWrapper">
+                    <h1>Results</h1>
+                </div>
+                <ResultRow />
                 <div className="ResultCardWrapper">{this.state.results.map((result, index) => (
                     <ResultCard
                         key={index}

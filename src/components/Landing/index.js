@@ -26,7 +26,7 @@ class Landing extends Component {
                         <Zipcode zipText="" />
                     </Grid>
                     <Grid item xs={6}>
-                        <Link to='/resources' style={{ textDecoration: 'none' }}>
+                        <Link to='/afflictions' style={{ textDecoration: 'none' }}>
                             <LandingButton buttonText="Go" />
                         </Link>
                     </Grid>
