@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 
 import Landing from './components/Landing/Landing'
+import Resources from './components/Resources/Resources'
 
 class App extends Component {
   constructor(props) {
