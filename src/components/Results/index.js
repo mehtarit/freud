@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ShareIcon from '@material-ui/icons/Share';
 
 import ResultCard from './ResultCard'
 
