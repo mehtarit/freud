@@ -21,10 +21,8 @@ class Landing extends Component {
                     <Grid item xs={12}>
                         <img src={V1} alt="Alignment logo" />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         <Zipcode zipText="" />
-                    </Grid>
-                    <Grid item xs={6}>
                         <Link to='/afflictions' style={{ textDecoration: 'none' }}>
                             <LandingButton buttonText="Go" />
                         </Link>
