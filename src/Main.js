@@ -24,6 +24,7 @@ const Main = (props) => {
       />
     );
   });
+
   return (
     <main>
       <Switch>

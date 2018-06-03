@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   render() {
-    const questions = [
+    const dynamicQuestions = [
       {
         type: 'checkbox',
         prompt: 'How are you feeling?',
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <Main
-          dynamicQuestions={questions}
+          dynamicQuestions={dynamicQuestions}
         />
       </div>
     );
