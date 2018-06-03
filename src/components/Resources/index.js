@@ -18,7 +18,7 @@ class Resources extends Component {
             <div className="Resources">
                 <h1>I'm looking for...</h1>
                 <div className="ResourceCardWrapper">{this.state.resources.map((resource, index) => (
-                    <Link to='/conversation' style={{ textDecoration: 'none' }}
+                    <Link to='/conversation/0' style={{ textDecoration: 'none' }}
                         key={index}><ResourceCard
                             key={index}
                             image={resource.imageURL}

@@ -9,6 +9,7 @@ const Container = (props) => {
         type={props.type}
         prompt={props.prompt}
         answers={props.answers}
+        next={props.next}
         />
     );
 }

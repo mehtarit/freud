@@ -48,10 +48,27 @@ const ConversationComponent = (props) => {
                     <FormControl component="fieldset">
                         <FormGroup>
                             {answerList}
-                        </FormGroup>
+                        </FormGroup>                       
                     </FormControl>
             }
-        </div>
+
+            <div>
+            {
+
+            props.next === 'null' 
+            ?
+             <Link to='/results' style={{ textDecoration: 'none' }}>
+                    <LandingButton buttonText="Submit" />
+            :
+            <Link to={props.next} style={{ textDecoration: 'none' }}>
+                    <LandingButton buttonText="Next" />
+
+            }
+            </div>
+
+       </div>
+
+
     )
 }
 
