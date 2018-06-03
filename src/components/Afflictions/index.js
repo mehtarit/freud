@@ -21,7 +21,7 @@ class Afflictions extends Component {
                     <Link to='/resources' style={{ textDecoration: 'none' }}
                         key={index}><AfflictionCard
                             key={index}
-                            //image={resource.imageURL}
+                            image={affliction.imageUrl}
                             afflictionPrompt={affliction.prompt} /></Link>
                 ))
                 }</div>

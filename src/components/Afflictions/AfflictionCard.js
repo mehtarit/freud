@@ -38,6 +38,11 @@ function AfflictionCard(props) {
     return (
         <div>
             <Card raised className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={props.image}
+                    title="Affliction Image"
+                />
                 <CardActions>
                     <Button size="small">{props.afflictionPrompt}</Button>
                 </CardActions>
@@ -49,6 +54,7 @@ function AfflictionCard(props) {
 AfflictionCard.propTypes = {
     classes: PropTypes.object.isRequired,
     afflictionPrompt: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(AfflictionCard);
