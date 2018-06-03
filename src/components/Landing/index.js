@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Grid from '@material-ui/core/Grid';
 
-
 import Header from './Header';
 import LandingButton from './LandingButton';
 import Zipcode from './Zipcode';
@@ -20,7 +19,7 @@ class Landing extends Component {
             <div className="Landing">
                 <Grid container spacing={0}>
                     <Grid item xs={12}>
-                        <img src={V1} />
+                        <img src={V1} alt="Alignment logo" />
                     </Grid>
                     <Grid item xs={6}>
                         <Zipcode zipText="" />
@@ -30,11 +29,8 @@ class Landing extends Component {
                             <LandingButton buttonText="Go" />
                         </Link>
                     </Grid>
-
                     {/* <Header headerText="The Mental Health Directory" /> */}
-
                 </Grid>
-
             </div>
         );
     }

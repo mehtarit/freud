@@ -15,7 +15,7 @@ const resources = [{
     resourceSubtext: "If you need legal help with a mental health hearing or appeal, speak with the patient advocate or rights advisor in the facility where you are admitted or receiving treatment.The patient advocate or rights advisor can advise you of your rights and help you choose a lawyer if one is needed."
 }, {
     id: 3,
-    "imageURL": "http://arabcooking.me/wp-content/uploads/download-map-uc-health-midtown-major-tourist-attractions-maps-inside.jpg",
+    "imageURL": "http://static-28.sinclairstoryline.com/resources/media/c314010d-1d32-4437-b860-724ab5bc4f0a-large16x9_IMG_1207.JPG",
     resourceTitle: "Crisis Centers",
     resourceSubtext: "Crisis centers are the ultimate \"community mental health service,\" as they usually serve the entire community, often at all hours and free of charge. Smaller centers serve a few thousand people each year, while others serve hundreds of thousands annually, depending on their community’ s size and the strength of their funding sources.They are a also a vital resource to their community service systems by connecting callers to providers that exist to care for their needs."
 }, {

@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-class Zipcode extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+const styles = {
+    input: {
+        color: '#fff'
+    },
+};
 
-    render() {
-        return (
-            <TextField
-                id="with-placeholder"
-                label="Enter your zipcode"
-                placeholder="zipcode"
-                className={this.props.zipText}
-                margin="normal"
-            />
-        );
-    }
+function Zipcode(props) {
+    return (
+        <TextField
+            id="with-placeholder"
+            label="Enter your zipcode"
+            placeholder="zipcode"
+            InputProps={{
+                className: props.classes.input
+            }}
+            margin="normal"
+        />
+    );
 }
 
 Zipcode.propTypes = {
-    zipText: PropTypes.string
+    classes: PropTypes.object.isRequired,
 }
 
-export default Zipcode;
+export default withStyles(styles)(Zipcode);
