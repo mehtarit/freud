@@ -6,7 +6,7 @@ const resources = [{
 }, {
     id: 1,
     "imageURL": "https://www.goodtherapy.org/blog/blog/wp-content/uploads/2015/12/Therapist-comforting-person-in-therapy.jpg",
-    resourceTitle: "A Counselor",
+    resourceTitle: "Counselors",
     resourceSubtext: "Mental Health Counselors work with individuals, couples, families, and groups to address and treat emotional and mental disorders and to promote mental health.Most mental health counselors in the U.S.work in outpatient and residential care centers, individual and family services, and local governments.They are trained in a variety of therapeutic techniques used to address issues, including depression, anxiety, addiction and substance abuse, suicidal impulses, stress, problems with self - esteem, and grief."
 }, {
     id: 2,
@@ -20,13 +20,13 @@ const resources = [{
     resourceSubtext: "Crisis centers are the ultimate \"community mental health service,\" as they usually serve the entire community, often at all hours and free of charge. Smaller centers serve a few thousand people each year, while others serve hundreds of thousands annually, depending on their community’ s size and the strength of their funding sources.They are a also a vital resource to their community service systems by connecting callers to providers that exist to care for their needs."
 }, {
     id: 4,
-    "imageURL": "http://cristinaculiolopeck.com/img/rs-slider/slides/cristina-slide.png",
-    resourceTitle: "Psychiatrist",
+    "imageURL": "https://cdn4.sussexdirectories.com/rms/rms_photos/sized/26/58/195826-296451-3_320x400.jpg?pu=1404744174",
+    resourceTitle: "Psychiatrists",
     resourceSubtext: "Psychiatrist provide therapy, but they can also prescribe medication and diagnose medical illnesses like diabetes or high blood pressure.Psychiatrists are also able to determine the effects a mental condition can have on other medical issues such as heart disease, obesity, and alcoholism."
 }, {
     id: 5,
     "imageURL": "https://gem4meinvestments.eu/assets/img/img13.jpeg",
-    resourceTitle: "Fact and Information",
+    resourceTitle: "Facts and Information",
     resourceSubtext: "Take advantage of a database of information and resources."
 }, ]
 
