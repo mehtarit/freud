@@ -8,7 +8,7 @@ class Results extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            results: ResultsApi.getAll()
+            results: ResultsApi.getAllExcludeGenderAndExcludeNoImages("male")
         };
     }
 
@@ -16,9 +16,9 @@ class Results extends Component {
         return (
             <div className="Results">
                 <h1>Results</h1>
-                <div className="ResultCardWrapper">{this.state.results.map(result => (
+                <div className="ResultCardWrapper">{this.state.results.map((result, index) => (
                     <ResultCard
-                        key={result.firstName}
+                        key={index}
                         image={result.imageURL}
                         resultTitle={result.firstName}
                         resultSubtext={result.phoneNumber} />
