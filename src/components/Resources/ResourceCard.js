@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
@@ -22,6 +23,10 @@ const styles = {
         marginBottom: 16,
         fontSize: 14,
     },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
+    },
     pos: {
         marginBottom: 12,
     },
@@ -33,6 +38,11 @@ function ResourceCard(props) {
     return (
         <div>
             <Card raised className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={props.image}
+                    title="Resource Image"
+                />
                 <CardContent>
                     <Typography variant="headline" component="h2">
                         {props.resourceTitle}
@@ -42,7 +52,7 @@ function ResourceCard(props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Learn More</Button>
+                    <Button size="small">Select</Button>
                 </CardActions>
             </Card>
         </div>

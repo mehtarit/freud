@@ -21,6 +21,7 @@ class Resources extends Component {
                     <Link to='/conversation' style={{ textDecoration: 'none' }}
                         key={index}><ResourceCard
                             key={index}
+                            image={resource.imageURL}
                             resourceTitle={resource.resourceTitle}
                             resourceSubtext={resource.resourceSubtext} /></Link>
                 ))

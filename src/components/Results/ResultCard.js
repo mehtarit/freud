@@ -7,11 +7,14 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import PhoneIcon from '@material-ui/icons/Phone';
+import WorkIcon from '@material-ui/icons/Work';
 
 const styles = {
     card: {
         minWidth: 175,
-        maxWidth: 275,
+        maxWidth: 285,
         margin: 15
     },
     bullet: {
@@ -48,15 +51,27 @@ function ResultCard(props) {
                         {props.resultTitle}
                     </Typography>
                     <Typography component="p">
-                        {props.resultSubtext}
+                        {props.resultProfileBio}
+                    </Typography>
+                    <IconButton aria-label="Phone">
+                        <PhoneIcon />
+                    </IconButton>
+                    <Typography component="p">
+                        {props.resultPhoneNumber}
+                    </Typography>
+                    <IconButton aria-label="Address">
+                        <WorkIcon />
+                    </IconButton>
+                    <Typography component="p">
+                        {props.resultLocation}
+                    </Typography>
+                    <Typography component="p">
+                        {props.resultQualifications}
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <Button size="small" color="primary">
-                        Expand
-          </Button>
-                    <Button size="small" color="primary">
-                        Contact
+                        Select
           </Button>
                 </CardActions>
             </Card>
@@ -66,9 +81,12 @@ function ResultCard(props) {
 
 ResultCard.propTypes = {
     classes: PropTypes.object.isRequired,
-    imageUrl: PropTypes.string,
-    resultTitle: PropTypes.string,
-    resultSubtext: PropTypes.string
+    image: PropTypes.string.isRequired,
+    resultTitle: PropTypes.string.isRequired,
+    resultProfileBio: PropTypes.string.isRequired,
+    resultPhoneNumber: PropTypes.string.isRequired,
+    resultLocation: PropTypes.string.isRequired,
+    resultQualifications: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(ResultCard);
