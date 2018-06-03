@@ -1,5 +1,6 @@
 .AfflictionCardWrapper {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .AfflictionCardWrapper div:first-child {

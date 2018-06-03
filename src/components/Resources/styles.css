@@ -1,5 +1,6 @@
 .ResourceCardWrapper {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .ResourceCardWrapper div:first-child {
