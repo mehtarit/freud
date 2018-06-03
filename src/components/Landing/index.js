@@ -14,7 +14,7 @@ class Landing extends Component {
         return (
             <div className="Landing">
                 <Header headerText="The Mental Health Directory" />
-                <Link to='/resources' style={{ textDecoration: 'none' }}>
+                <Link to='/afflictions' style={{ textDecoration: 'none' }}>
                     <LandingButton buttonText="Help!" />
                 </Link>
             </div>
