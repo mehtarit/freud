@@ -10,4 +10,4 @@ const Results= () => (
   </div>
 )
 
-export default results
+export default Results

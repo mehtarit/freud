@@ -4,12 +4,12 @@ import './styles/index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import 'typeface-roboto';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render((
   <HashRouter>
     <App />
-  <HashRouter>
+  </HashRouter>
 ), document.getElementById('root'));
 
 registerServiceWorker();
