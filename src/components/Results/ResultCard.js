@@ -13,9 +13,13 @@ import WorkIcon from '@material-ui/icons/Work';
 
 const styles = {
     card: {
-        minWidth: 175,
-        maxWidth: 398,
-        margin: 15
+        width: 300,
+        margin: 15,
+        height: 600
+    },
+    media: {
+        height: 0,
+        paddingTop: '90.25%', // 16:9
     },
     cardActions: {
         flexDirection: "column"
@@ -32,19 +36,9 @@ const styles = {
     pos: {
         marginBottom: 12,
     },
-    media: {
-        height: 0,
-        paddingTop: '90.25%', // 16:9
-    },
-    entryWithIconWrapper: {
-        display: "flex",
-        justifyContent: "flex-start",
-        flexWrap: "wrap"
-    },
-    entryWithIconParagraph: {
-        margin: "auto"
-    }
 };
+
+
 
 function ResultCard(props) {
     const { classes } = props;
@@ -58,12 +52,14 @@ function ResultCard(props) {
                     title="Contact Image"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
+                    <Typography className="Title" gutterBottom variant="headline" component="h2">
                         {props.resultTitle}
                     </Typography>
-                    <Typography component="p">
-                        {props.resultProfileBio}
-                    </Typography>
+                    <div className="Bio">
+                        <Typography component="p">
+                            {props.resultProfileBio}
+                        </Typography>
+                    </div>
                     <hr />
                     <div className={classes.entryWithIconWrapper}>
                         <IconButton aria-label="Phone">
