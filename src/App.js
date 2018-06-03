@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
+import Header from './Header'
+import Main from './Main'
 import './styles/App.css';
-
 import Landing from './components/Landing/Landing'
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const App = () => (
+  <div>
+    <Header />
+    <Main />
+  </div>
+)
 
-  render() {
-    return (
-      <div className="App">
-        <Landing />
-      </div>
-    );
-  }
-}
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//   }
 
-export default App;
+//   render() {
+//     return (
+//       <div className="App">
+//         <Landing />
+//       </div>
+//     );
+//   }
+// }
