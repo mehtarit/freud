@@ -213,7 +213,7 @@ const results = [{
     "title": "Just Mind",
     "freeConsultation": "Y",
     "price": "100, 155",
-    "qualifications": "multiple - LMFTA, Licensed Professional Counselor (LPC), Marriage and Family Therapist (LMFT), LPC Intern, RPT, LMFT-A, SEP, PsyD, LCSW",
+    "qualifications": "LMFTA, Licensed Professional Counselor (LPC), Marriage and Family Therapist (LMFT), LPC Intern, RPT, LMFT-A, SEP, PsyD, LCSW",
     "zipCode": "78759",
     "phoneNumber": "512-843-7665",
     "profileBio": "Just Mind is a boutique counseling center in Austin Texas that aims to remove the stigma from therapy through the environment we create and the unique attitudes of the associates who work with us. We were founded in 2007 and are proudly counseling Austin, TX & surrounding communities: Westlake, Lake Travis, Leander, Cedar Park, Round Rock, Pflugerville, Georgetown, and Travis County, Texas.",
