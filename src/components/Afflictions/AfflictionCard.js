@@ -4,15 +4,16 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 const styles = {
     card: {
         minWidth: 175,
         maxWidth: 275,
         margin: 15
+    },
+    cardActions: {
+        flexDirection: "column"
     },
     bullet: {
         display: 'inline-block',
@@ -43,7 +44,7 @@ function AfflictionCard(props) {
                     image={props.image}
                     title="Affliction Image"
                 />
-                <CardActions>
+                <CardActions className={classes.cardActions}>
                     <Button size="small">{props.afflictionPrompt}</Button>
                 </CardActions>
             </Card>
