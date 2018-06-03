@@ -10,16 +10,17 @@ import styles from './styles.css';
 
 
 const ConversationComponent = (props) => {
-    const answerList = props.answers.map((answer) => {
+    const answerList = props.answers.map((answer, i) => {
         if (props.type === 'radio') {
             return (
             <FormControlLabel
             control={
               <Radio
-                value="gilad"
+                key={i}
+                value={answer}
               />
             }
-            label="Gilad Gray"
+            label={answer}
           />
             )
         }
@@ -27,10 +28,11 @@ const ConversationComponent = (props) => {
             <FormControlLabel
             control={
               <Checkbox
-                value="gilad"
+                key={i}
+                value={answer}
               />
             }
-            label="Gilad Gray"
+            label={answer}
           />
         )
     });

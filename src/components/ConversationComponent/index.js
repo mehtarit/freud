@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ConversationComponent from './Component';
 
 
-export default class Container extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {};
-    }
-
-    render() {
-        return (
-          <ConversationComponent
-            type="text"
-            prompt="ldadfsol"
-            answers={['hi', 'how', 'are', 'you']}
-          />
-        );
-    }
+const Container = (props) => {
+    return (
+        <ConversationComponent
+        type={props.type}
+        prompt={props.prompt}
+        answers={props.answers}
+        />
+    );
 }
+
+export default Container
