@@ -17,6 +17,9 @@ const styles = {
         maxWidth: 285,
         margin: 15
     },
+    cardActions: {
+        flexDirection: "column"
+    },
     bullet: {
         display: 'inline-block',
         margin: '0 2px',
@@ -69,7 +72,7 @@ function ResultCard(props) {
                         {props.resultQualifications}
                     </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions className={classes.cardActions}>
                     <Button size="small" color="primary">
                         Select
           </Button>

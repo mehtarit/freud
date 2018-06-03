@@ -14,6 +14,9 @@ const styles = {
         margin: 15,
         height: 600
     },
+    cardActions: {
+        flexDirection: "column"
+    },
     bullet: {
         display: 'inline-block',
         margin: '0 2px',
@@ -51,7 +54,7 @@ function ResourceCard(props) {
                         {props.resourceSubtext}
                     </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions className={classes.cardActions}>
                     <Button size="small">Select</Button>
                 </CardActions>
             </Card>
