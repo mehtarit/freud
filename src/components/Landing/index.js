@@ -29,7 +29,6 @@ class Landing extends Component {
                             <LandingButton buttonText="Go" />
                         </Link>
                     </Grid>
-                    {/* <Header headerText="The Mental Health Directory" /> */}
                 </Grid>
             </div>
         );
