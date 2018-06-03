@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import Grid from '@material-ui/core/Grid';
+
 
 import Header from './Header';
-import LandingButton from './LandingButton'
+import LandingButton from './LandingButton';
+import Zipcode from './Zipcode';
+
+import V1 from '../../images/V1.png';
 
 class Landing extends Component {
     constructor(props) {
@@ -13,10 +18,23 @@ class Landing extends Component {
     render() {
         return (
             <div className="Landing">
-                <Header headerText="The Mental Health Directory" />
-                <Link to='/afflictions' style={{ textDecoration: 'none' }}>
-                    <LandingButton buttonText="Help!" />
-                </Link>
+                <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                        <img src={V1} />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Zipcode zipText="" />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Link to='/afflictions' style={{ textDecoration: 'none' }}>
+                            <LandingButton buttonText="Go" />
+                        </Link>
+                    </Grid>
+
+                    {/* <Header headerText="The Mental Health Directory" /> */}
+
+                </Grid>
+
             </div>
         );
     }
