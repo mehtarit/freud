@@ -5,7 +5,7 @@ const resources = [{
     resourceSubtext: "In a support group, members provide each other with various types of help, usually nonprofessional, for a particular shared, usually burdensome, characteristic. Members with the same issues can come together for sharing coping strategies, to feel more empowered and for a sense of community. Support groups provide relevant information, relating personal experiences, listening to and accepting others' experiences, providing sympathetic understanding and establishing social networks."
 }, {
     id: 1,
-    "imageURL": "https://www.goodtherapy.org/blog/blog/wp-content/uploads/2015/12/Therapist-comforting-person-in-therapy.jpg",
+    "imageURL": "https://cdn1.counseling.steinhardt.nyu.edu/content/f3db8d7a5fd043069ed7fa6c2d2fcef3/school-counselors_vs_guidance-counselors_hero3.jpg",
     resourceTitle: "Counselors",
     resourceSubtext: "Mental Health Counselors work with individuals, couples, families, and groups to address and treat emotional and mental disorders and to promote mental health.Most mental health counselors in the U.S.work in outpatient and residential care centers, individual and family services, and local governments.They are trained in a variety of therapeutic techniques used to address issues, including depression, anxiety, addiction and substance abuse, suicidal impulses, stress, problems with self - esteem, and grief."
 }, {
