@@ -6,9 +6,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
-import styles from './styles.css';
+import './styles.css';
 import { Link } from 'react-router-dom'
 import LandingButton from '../Landing/LandingButton'
+
 
 
 const ConversationComponent = (props) => {
@@ -40,7 +41,7 @@ const ConversationComponent = (props) => {
     });
 
     return (
-        <div>
+        <div className='ConversationComponent'>
             <h1> {props.prompt} </h1>
             {
                 props.type === 'text'

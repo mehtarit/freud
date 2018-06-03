@@ -10,3 +10,9 @@
   margin: auto;
   width: 50%;
   background-size: 100%; }
+
+.ConversationComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
