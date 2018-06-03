@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import ResourceCard from './ResourceCard'
 
 import ResourcesApi from '../../api/ResourcesApi'
+import './styles.css'
 
 class Resources extends Component {
     constructor(props) {
