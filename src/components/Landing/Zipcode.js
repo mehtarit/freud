@@ -5,7 +5,8 @@ import TextField from '@material-ui/core/TextField';
 
 const styles = {
     input: {
-        color: '#fff'
+        color: '#fff',
+        fontSize: 24
     },
 };
 

@@ -87,9 +87,9 @@ function ResultCard(props) {
                     </Typography>
                 </CardContent>
                 <CardActions className={classes.cardActions}>
-                    <Button size="small" color="primary">
+                    <Button size="small">
                         Select
-          </Button>
+                    </Button>
                 </CardActions>
             </Card>
         </div>
