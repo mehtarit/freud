@@ -7,6 +7,8 @@ import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import styles from './styles.css';
+import { Link } from 'react-router-dom'
+import LandingButton from '../Landing/LandingButton'
 
 
 const ConversationComponent = (props) => {
@@ -55,17 +57,17 @@ const ConversationComponent = (props) => {
             <div>
             {
 
-            props.next === 'null' 
+            props.next === null
             ?
-             <Link to='/results' style={{ textDecoration: 'none' }}>
-                    <LandingButton buttonText="Submit" />
+                <Link exact to='/results' style={{ textDecoration: 'none' }}>
+                        <LandingButton buttonText="Submit" />
+                </Link>
             :
-            <Link to={props.next} style={{ textDecoration: 'none' }}>
-                    <LandingButton buttonText="Next" />
-
+                <Link to={props.next} style={{ textDecoration: 'none' }}>
+                        <LandingButton buttonText="Next" />
+                </Link>
             }
             </div>
-
        </div>
 
 
