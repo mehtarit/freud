@@ -17,7 +17,7 @@ class Afflictions extends Component {
     render() {
         return (
             <div className="Afflictions">
-                <h1>I need help with...</h1>
+                <h1 style={{ color: "#fff" }}>I need help with...</h1>
                 <div className="AfflictionCardWrapper">{this.state.afflictions.map((affliction, index) => (
                     <Link to='/resources' style={{ textDecoration: 'none' }}
                         key={index}><AfflictionCard

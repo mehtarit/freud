@@ -1,3 +1,12 @@
 .AfflictionCardWrapper {
   display: flex;
 }
+
+.AfflictionCardWrapper div:first-child {
+	margin-left: 0px;
+}
+
+.Afflictions{
+	padding-left:50px;
+	padding-top: 25px;
+}
