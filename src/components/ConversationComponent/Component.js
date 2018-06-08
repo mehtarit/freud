@@ -1,81 +1,82 @@
-import React from 'react';
-import Component from './Component';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import TextField from '@material-ui/core/TextField';
-import Checkbox from '@material-ui/core/Checkbox';
-import Radio from '@material-ui/core/Radio';
-import './styles.css';
-import { Link } from 'react-router-dom'
-import LandingButton from '../Landing/LandingButton'
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import FormControl from "@material-ui/core/FormControl";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import TextField from "@material-ui/core/TextField";
+import "./styles.css";
+import { Link } from "react-router-dom";
+import LandingButton from "../Landing/LandingButton";
 
+import CheckboxConversationComponent from "./CheckboxConversationComponent";
+import RadioConversationComponent from "./RadioConversationComponent";
 
+const styles = theme => ({
+  root: {
+    display: "flex"
+  },
+  formControl: {
+    margin: theme.spacing.unit * 3
+  },
+  group: {
+    margin: `${theme.spacing.unit}px 0`
+  }
+});
 
-const ConversationComponent = (props) => {
-    const answerList = props.answers.map((answer, i) => {
-        if (props.type === 'radio') {
-            return (
-            <FormControlLabel
-            control={
-              <Radio
-                key={i}
-                value={answer}
-              />
-            }
-            label={answer}
-          />
-            )
-        }
-        return (
-            <FormControlLabel
-            control={
-              <Checkbox
-                key={i}
-                value={answer}
-              />
-            }
-            label={answer}
-          />
-        )
-    });
-
+class ConversationComponent extends React.Component {
+  answerList = this.props.answers.map((answer, index) => {
+    if (this.props.type === "radio") {
+      return (
+        <FormControlLabel
+          key={index}
+          control={<RadioConversationComponent value={answer} />}
+          label={answer}
+        />
+      );
+    }
     return (
+      <FormControlLabel
+        key={index}
+        control={<CheckboxConversationComponent key={index} value={answer} />}
+        label={answer}
+      />
+    );
+  });
 
-        <div className='ConversationComponent'>
-            {
-             <div className='ConversationCentered'>
-                <h1> {props.prompt} </h1>
-                {
-                    props.type === 'text'
-                    ?
-                        <div>
-                        <TextField></TextField>                        
-                        </div>              
-                    : 
-                    <FormControl component="fieldset">
-                        <FormGroup>
-                            {answerList}
-                        </FormGroup>
-                    </FormControl>
-                }
-                                        {
-                           props.next === null
-                            ?
-                            <Link exact to='/results' style={{ textDecoration: 'none' }}>
-                                <LandingButton buttonText="Submit" />
-                            </Link>
-                            :
-                            <Link to={props.next} style={{ textDecoration: 'none' }}>
-                                <LandingButton buttonText="Next" />
-                            </Link>
-                        }
-            </div>
+  render() {
+    return (
+      <div className="ConversationComponent">
+        {
+          <div className="ConversationCentered">
+            <h1 className="page-header"> {this.props.prompt} </h1>
+            {this.props.type === "text" ? (
+              <div>
+                <TextField />
+              </div>
+            ) : (
+              <FormControl component="fieldset">
+                <FormGroup>{this.answerList}</FormGroup>
+              </FormControl>
+            )}
+            {this.props.next === null ? (
+              <Link to="/results" style={{ textDecoration: "none" }}>
+                <LandingButton buttonText="Submit" />
+              </Link>
+            ) : (
+              <Link to={this.props.next} style={{ textDecoration: "none" }}>
+                <LandingButton buttonText="Next" />
+              </Link>
+            )}
+          </div>
         }
-       </div>
-
-
-    )
+      </div>
+    );
+  }
 }
 
-export default ConversationComponent
+ConversationComponent.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(ConversationComponent);

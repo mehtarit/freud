@@ -1,8 +1,15 @@
+body {
+  margin: 0;
+  padding: 0; }
+
 html {
   min-width: 100vw;
   min-height: 100vh;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  background-color: #84e1ce; }
+  background-color: #324D5C; }
+
+.page-header {
+  color: #fff; }
 
 .Landing {
   background: url(../images/cover_health.png) no-repeat center center fixed;
